@@ -2,6 +2,16 @@
 
  A idéia do projeto é um crud de Pessoa, ou seja, é possível listar, cadastrar, editar e excluir(logicamente).
  
+ Segue imagens de como ficou:
+ 
+ <h1 align="center">
+    <img alt="List" title="#dale" src="images/list.png" width="800px" />
+</h1>
+
+<h1 align="center">
+    <img alt="Edit" title="#dale" src="images/edit.png" width="800px" />
+</h1>
+ 
 Este projeto utiliza as seguinte tecnologias no backend: 
    - Spring Boot 2.2.5 (com java 11)
    - Postgres
