@@ -5,11 +5,11 @@
  Segue imagens de como ficou:
  
  <h1 align="center">
-    <img alt="List" title="#dale" src="images/list.png" width="800px" />
+    <img alt="List" title="#dale" src="images/list.png" width="900px" />
 </h1>
 
 <h1 align="center">
-    <img alt="Edit" title="#dale" src="images/edit.png" width="800px" />
+    <img alt="Edit" title="#dale" src="images/edit.png" width="900px" />
 </h1>
  
 Este projeto utiliza as seguinte tecnologias no backend: 
@@ -25,7 +25,8 @@ Já no frontend:
   - Ngx-pagination 5
   - Ngx-toastr 12
   
-Para fazer o deploy da aplicação: 
+# Para fazer o deploy da aplicação: 
+
   - Para o backend:
   
     1 - Instalar o Postgres e ajustar o arquivo application.properties, onde deve ser configurada a 
@@ -35,7 +36,7 @@ Para fazer o deploy da aplicação:
     
     3 - Instalar o Maven 3.
     
-    4 - Excecutar o comando clean instal no projeto, que gerará o arquivo "pessoa-1.0.0-SNAPSHOT.jar" 
+    4 - Executar o comando clean instal no projeto, que gerará o arquivo "pessoa-1.0.0-SNAPSHOT.jar" 
         do projeto na pasta target.
         
     5 - Por fim executar o comando java -jar no arquivo "pessoa-1.0.0-SNAPSHOT.jar".
@@ -52,11 +53,11 @@ Para fazer o deploy da aplicação:
     
     5 - Colocar o diretório da pasta dist dentro dos sites-available do nginx. 
  
-# O projeto estará disponível no contexto /pessoas.
+* O projeto estará disponível no contexto /pessoas.
 
-Documentação:
+# Documentação:
 
- O projeto backend esta formatado da seguinte forma:
+ O projeto backend está formatado da seguinte forma:
   
   - PessoaEntity - responsável pela camada de modelo.
   
