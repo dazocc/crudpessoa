@@ -1,0 +1,8 @@
+
+.content{
+  /*sequencia de fonte*/
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, Helvetica, sans-serif;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 30px;
+}
