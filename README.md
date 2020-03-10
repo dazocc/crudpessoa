@@ -12,6 +12,8 @@
     <img alt="Edit" title="#dale" src="images/edit.png" width="900px" />
 </h1>
  
+# Tecnologias:
+
 Este projeto utiliza as seguinte tecnologias no backend: 
    - Spring Boot 2.2.5 (com java 11)
    - Postgres
@@ -53,7 +55,7 @@ Já no frontend:
     
     5 - Colocar o diretório da pasta dist dentro dos sites-available do nginx. 
  
-* O projeto estará disponível no contexto /pessoas.
+**O projeto estará disponível no contexto /pessoas.**
 
 # Documentação:
 
