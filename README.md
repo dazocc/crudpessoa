@@ -1,6 +1,6 @@
 # Crud Pessoa
 
- A idéia do projeto é um crud de Pessoa, ou seja, é possível listar, cadastrar, editar e excluir(logicamente).
+ A idéia do projeto é um crud de Pessoa internacionalizado, ou seja, é possível listar, cadastrar, editar e excluir(logicamente) utilizando inglês e português.
  
  Segue imagens de como ficou:
  
@@ -26,6 +26,7 @@ Já no frontend:
   - Ngx-mask 8
   - Ngx-pagination 5
   - Ngx-toastr 12
+  - Ngx-translate 12
   
 # Para fazer o deploy da aplicação: 
 
@@ -93,3 +94,5 @@ Já no frontend:
     - pasta compartilhado - arquivos reusados entre os componentes tais como service e model
     
   - enviroments - variáveis de ambiente do projeto
+  
+  - assets - arquivos com a internacionalização do frontend.
