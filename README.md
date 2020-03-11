@@ -71,7 +71,7 @@ Já no frontend:
   
   - DetalheException, ResourceExceptionHandler - responsáveis pelo tratamento de erros.
   
-  - PessoaValidacaoException, PessoaNaoEncontradaException - responsáveis pelos erros da aplicação.
+  - PessoaValidacaoException - responsável pelos erros da aplicação.
   
   - WebConfig, application.properties - responsáveis pelas configurações necessárias para rodar no Spring. (Internacionalização e Cors) 
   
