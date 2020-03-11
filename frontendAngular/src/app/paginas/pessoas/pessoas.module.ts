@@ -6,6 +6,7 @@ import { PessoaListaComponent } from './pessoa-lista/pessoa-lista.component';
 import { PessoaFormComponent } from './pessoa-form/pessoa-form.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [PessoaListaComponent, PessoaFormComponent],
@@ -13,7 +14,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CompartilhadoModule,
     PessoasRoutingModule,
     NgxPaginationModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    HttpClientModule
   ]
 })
 

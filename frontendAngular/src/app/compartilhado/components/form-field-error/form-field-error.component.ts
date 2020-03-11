@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl } from "@angular/forms";
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-form-field-error',
@@ -14,7 +15,13 @@ export class FormFieldErrorComponent implements OnInit {
 
   @Input('form-control') formControl: FormControl;
 
-  constructor() { }
+  constructor(public translate: TranslateService) {
+
+    translate.addLangs(['en', 'br']);
+    translate.setDefaultLang('br');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|br/) ?  browserLang : 'br');
+  }
 
   ngOnInit() {
   }
@@ -33,19 +40,19 @@ export class FormFieldErrorComponent implements OnInit {
 
   private getErrorMessage(): string | null {
     if( this.formControl.errors.required )
-      return "dado obrigatório";
+      return this.translate.instant('COMPONENT_MSG_ERROR.DATA_IS_MANDATORY');
 
     else if( this.formControl.errors.email)
-      return "formato de email inválido"
+      return this.translate.instant('COMPONENT_MSG_ERROR.EMAIL_INVALID');
 
     else if( this.formControl.errors.minlength){
       const requiredLength = this.formControl.errors.minlength.requiredLength;
-      return `deve ter no mínimo ${requiredLength} caracteres`;
+      return this.translate.instant('COMPONENT_MSG_ERROR.MINIMUM_CHARACTERS', { requiredLength });
     }
 
     else if( this.formControl.errors.maxlength){
       const requiredLength = this.formControl.errors.maxlength.requiredLength;
-      return `deve ter no máximo ${requiredLength} caracteres`;
+      return this.translate.instant('COMPONENT_MSG_ERROR.MAXIMUM_CHARACTERS', { requiredLength });
     }
   }
 

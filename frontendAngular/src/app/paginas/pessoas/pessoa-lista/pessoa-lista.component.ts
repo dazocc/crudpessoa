@@ -1,6 +1,7 @@
 import { Page } from './../compartilhado/page.model';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 import { PessoaService } from '../compartilhado/pessoa.service';
 import { PessoaEntity } from '../compartilhado/pessoa.model';
@@ -13,12 +14,20 @@ import { PessoaEntity } from '../compartilhado/pessoa.model';
 export class PessoaListaComponent implements OnInit {
 
   pessoaForm: FormGroup;
-    page: Page<PessoaEntity>;
+  page: Page<PessoaEntity>;
   pessoas: PessoaEntity [];
-  paginaAtual : number = 1 ;
+  paginaAtual: number = 1 ;
 
-  constructor(private pessoaService: PessoaService,
-              private formBuilder: FormBuilder) {
+  constructor(public translate: TranslateService,
+              private formBuilder: FormBuilder,
+              private pessoaService: PessoaService,
+              ) {
+
+    translate.addLangs(['en', 'br']);
+    translate.setDefaultLang('br');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|br/) ?  browserLang : 'br');
+    this.translate = translate;
    }
 
    private buildPessoaForm() {

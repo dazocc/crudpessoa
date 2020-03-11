@@ -1,0 +1,45 @@
+{
+  "LIST_PERSON" : {
+    "TITLE" : "Persons",
+    "ACTION_NEW" : "+  New Person",
+    "NAME" : "Name",
+    "CPF" : "CPF",
+    "EMAIL" : "E-mail",
+    "BIRTHDAY" : "Birth Day",
+    "FILTER" : "Filter",
+    "ACTIONS" : "Actions",
+    "EDIT" : "Edit",
+    "EXCLUDE" : "Exclude",
+    "BEFORE" : "Before",
+    "AFTER" : "After"
+  },
+
+  "EDIT_PERSON" : {
+    "TITLE1" : "Editing Person",
+    "TITLE2" : "Signing up Person",
+    "BACK" : "<< Back",
+    "NAME" : "Name",
+    "CPF" : "CPF",
+    "EMAIL" : "E-mail",
+    "BIRTHDAY" : "Birth Day",
+    "AVATAR" : "Avatar",
+    "SAVE" : "Save"
+  },
+
+  "COMPONENT_SERVER_ERROR" : {
+    "MSG_ERROR" : "Server erro:"
+  },
+
+  "COMPONENT_MSG_ERROR" : {
+    "DATA_IS_MANDATORY" : "Data is required",
+    "EMAIL_INVALID" : "Invalid email format",
+    "MINIMUM_CHARACTERS" : "Must have at least {{ requiredLength }} characters",
+    "MAXIMUM_CHARACTERS" : "Must have at most {{ requiredLength }} characters"
+  },
+
+  "MSG" :{
+    "ERROR" : "There was an error processing your request!",
+    "ERROR_SERVER" : "Communication with the server failed. Please try again later.",
+    "SUCCESS" : "Request processed successfully!"
+  }
+}

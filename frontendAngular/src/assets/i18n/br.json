@@ -1,0 +1,46 @@
+{
+  "LIST_PERSON" : {
+    "TITLE" : "Pessoas",
+    "ACTION_NEW" : "+  Nova Pessoa",
+    "NAME" : "Nome",
+    "CPF" : "CPF",
+    "EMAIL" : "E-mail",
+    "BIRTHDAY" : "Data Nasc.",
+    "FILTER" : "Filtrar",
+    "ACTIONS" : "Ações",
+    "EDIT" : "Editar",
+    "EXCLUDE" : "Excluir",
+    "BEFORE" : "Anterior",
+    "AFTER" : "Próximo"
+    },
+
+    "EDIT_PERSON" : {
+      "TITLE1" : "Editando Pessoa",
+      "TITLE2" : "Cadastrando Pessoa",
+      "BACK" : "<< Voltar",
+      "NAME" : "Nome",
+      "CPF" : "CPF",
+      "EMAIL" : "E-mail",
+      "BIRTHDAY" : "Data Nasc.",
+      "AVATAR" : "Avatar",
+      "SAVE" : "Save"
+    },
+
+    "COMPONENT_SERVER_ERROR" : {
+      "MSG_ERROR" : "Erro no servidor:"
+    },
+
+    "COMPONENT_MSG_ERROR" : {
+      "DATA_IS_MANDATORY" : "Dado é obrigatório",
+      "EMAIL_INVALID" : "Formato do email é inválido",
+      "MINIMUM_CHARACTERS" : "Deve ter no mínimo {{ requiredLength }} caracteres",
+      "MAXIMUM_CHARACTERS" : "Deve ter no máximo {{ requiredLength }} caracteres"
+    },
+
+    "MSG" :{
+      "ERROR" : "Ocorreu um erro ao processar a sua solicitação!",
+      "ERROR_SERVER" : "Falha na comunicação com o servidor. Por favor, tente mais tarde.",
+      "SUCCESS" : "Solicitação processada com sucesso!"
+    }
+
+}

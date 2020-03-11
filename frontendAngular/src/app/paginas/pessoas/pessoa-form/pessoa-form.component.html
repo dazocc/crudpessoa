@@ -6,7 +6,7 @@
   </div>
   <div class="col-md-3 text-right">
     <a routerLink="/pessoas" class="btn btn-success float-right">
-      << Voltar
+      {{ 'EDIT_PERSON.BACK' | translate }}
     </a>
   </div>
 </div>
@@ -20,25 +20,25 @@
     <div class="card-body">
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="nome">Nome</label>
+          <label for="nome">{{ 'EDIT_PERSON.NAME' | translate }}</label>
           <input type="text" class="form-control" id="nome" formControlName="nome">
           <app-form-field-error [form-control]="pessoaForm.get('nome')"></app-form-field-error>
         </div>
 
         <div class="form-group col-md-6">
-          <label for="email">E-mail</label>
+          <label for="email">{{ 'EDIT_PERSON.EMAIL' | translate }}</label>
           <input type="text" class="form-control" id="email" formControlName="email">
           <app-form-field-error [form-control]="pessoaForm.get('email')"></app-form-field-error>
         </div>
 
         <div class="form-group col-md-3">
-          <label for="cpf">CPF</label>
+          <label for="cpf">{{ 'EDIT_PERSON.CPF' | translate }}</label>
           <input type="text" mask="000.000.000-00" class="form-control" id="cpf" formControlName="cpf">
           <app-form-field-error [form-control]="pessoaForm.get('cpf')"></app-form-field-error>
         </div>
 
         <div class="form-group col-md-2">
-          <label for="dataNascimento">Data Nascimento</label>
+          <label for="dataNascimento">{{ 'EDIT_PERSON.BIRTHDAY' | translate }}</label>
           <input type="text" mask="d0/m0/0000"
           [dropSpecialCharacters]="false" class="form-control" placeholder="dd/mm/yyyy"
             id="dataNascimento" formControlName="dataNascimento" [clearIfNotMatch]="true">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="form-group col-md-2">
-          <label for="avatar">Avatar</label>
+          <label for="avatar">{{ 'EDIT_PERSON.AVATAR' | translate }}</label>
           <input  type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".png,.bmp,.jpeg">
         </div>
       </div>
@@ -59,7 +59,7 @@
   </div>
 
   <button [disabled]="submittingForm || pessoaForm.invalid" type="submit" class="btn btn-primary btn-lg float-right mt-3">
-    Salvar
+    {{ 'EDIT_PERSON.SAVE' | translate }}
   </button>
 
 </form>

@@ -1,12 +1,12 @@
 <div class="row mb-4">
   <div class="col-md-9">
     <h1 class="h2 border-left pl-2">
-     Pessoas
+     {{ 'LIST_PERSON.TITLE' | translate }}
     </h1>
   </div>
   <div class="col-md-3 text-right">
     <a routerLink="new" class="btn btn-success float-right">
-      + Nova Pessoa
+      {{ 'LIST_PERSON.ACTION_NEW' | translate }}
     </a>
   </div>
 </div>
@@ -17,19 +17,19 @@
     <div class="card-body">
       <div class="form-row">
         <div class="form-group col-md-3">
-          <label for="nome">Nome</label>
+          <label for="nome">{{ 'LIST_PERSON.NAME' | translate }}</label>
           <input type="text" class="form-control" id="nome" formControlName="nome">
         </div>
         <div class="form-group col-md-3">
-          <label for="cpf">CPF</label>
+          <label for="cpf">{{ 'LIST_PERSON.CPF' | translate }}</label>
           <input type="text" mask="000.000.000-00" class="form-control" id="cpf" formControlName="cpf">
         </div>
         <div class="form-group col-md-3">
-          <label for="email">E-mail</label>
+          <label for="email">{{ 'LIST_PERSON.EMAIL' | translate }}</label>
           <input type="text" class="form-control" id="email" formControlName="email">
         </div>
         <div class="form-group col-md-3">
-          <label for="dataNascimento">Data Nasc.</label>
+          <label for="dataNascimento">{{ 'LIST_PERSON.BIRTHDAY' | translate }}</label>
           <input type="text" class="form-control" id="dataNascimento" formControlName="dataNascimento"
             mask="d0/m0/0000" [dropSpecialCharacters]="false" placeholder="dd/mm/yyyy" [clearIfNotMatch]="true">
         </div>
@@ -39,7 +39,7 @@
 
   <div class="modal-footer">
     <a (click)="filtrar()" class="btn btn-success float-right" style="color:#fff">
-      Filtrar
+      {{ 'LIST_PERSON.FILTER' | translate }}
     </a>
   </div>
 </div>
@@ -49,11 +49,11 @@
   <thead>
     <tr class="bg-primary text-light">
       <th></th>
-      <th>Nome</th>
-      <th>CPF</th>
-      <th>E-mail</th>
-      <th>Data Nasc.</th>
-      <th>Ações</th>
+      <th>{{ 'LIST_PERSON.NAME' | translate }}</th>
+      <th>{{ 'LIST_PERSON.CPF' | translate }}</th>
+      <th>{{ 'LIST_PERSON.EMAIL' | translate }}</th>
+      <th>{{ 'LIST_PERSON.BIRTHDAY' | translate }}</th>
+      <th>{{ 'LIST_PERSON.ACTIONS' | translate }}</th>
     </tr>
   </thead>
 
@@ -77,8 +77,12 @@
         <strong>{{ pessoa.dataNascimento }}</strong><br>
       </td>
       <td>
-        <a [routerLink]="[pessoa.id, 'edit']" class="btn btn-info btn-sm mr-2">Editar</a>
-        <button (click)="deleteResource(pessoa)" class="btn btn-danger btn-sm">Excluir</button>
+        <a [routerLink]="[pessoa.id, 'edit']" class="btn btn-info btn-sm mr-2">
+          {{ 'LIST_PERSON.EDIT' | translate }}
+        </a>
+        <button (click)="deleteResource(pessoa)" class="btn btn-danger btn-sm">
+          {{ 'LIST_PERSON.EXCLUDE' | translate }}
+        </button>
       </td>
     </tr>
 
@@ -87,5 +91,7 @@
 </table>
 
 <div class="text-right">
-  <pagination-controls (pageChange)="paginaAtual = $event"  previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+  <pagination-controls (pageChange)="paginaAtual = $event"
+    previousLabel="{{ 'LIST_PERSON.BEFORE' | translate }}"
+    nextLabel="{{ 'LIST_PERSON.AFTER' | translate }}"></pagination-controls>
 </div>

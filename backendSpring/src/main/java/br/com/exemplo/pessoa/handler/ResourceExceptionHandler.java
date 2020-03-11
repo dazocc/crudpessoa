@@ -1,6 +1,5 @@
 package br.com.exemplo.pessoa.handler;
 
-import br.com.exemplo.pessoa.exceptions.PessoaNaoEncontradaException;
 import br.com.exemplo.pessoa.exceptions.PessoaValidacaoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -23,15 +22,6 @@ public class ResourceExceptionHandler extends ResponseEntityExceptionHandler {
 
     @Autowired
     private MessageSource messageSource;
-
-    @ExceptionHandler(PessoaNaoEncontradaException.class)
-    public ResponseEntity<DetalheException> handlePessoaNaoEncontrada(PessoaNaoEncontradaException e, HttpServletRequest request) {
-
-        DetalheException detalheException = new DetalheException(HttpStatus.NOT_FOUND.value(),
-                System.currentTimeMillis(), "A pessoa não foi encontrado");
-
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(detalheException);
-    }
 
     @ExceptionHandler(PessoaValidacaoException.class)
     public ResponseEntity<DetalheException> handlePessoaValidacao(PessoaValidacaoException e, HttpServletRequest request) {

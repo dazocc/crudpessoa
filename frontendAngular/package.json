@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^4.0.0",
     "angular-calendar": "^0.28.5",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",

@@ -1,6 +1,5 @@
 package br.com.exemplo.pessoa.services;
 
-import br.com.exemplo.pessoa.exceptions.PessoaNaoEncontradaException;
 import br.com.exemplo.pessoa.exceptions.PessoaValidacaoException;
 import br.com.exemplo.pessoa.models.ArquivoEntity;
 import br.com.exemplo.pessoa.models.PessoaEntity;
@@ -38,7 +37,7 @@ public class PessoaService {
         Optional<PessoaEntity> pessoaOptional = pessoaRepository.findById(id);
 
         if(!pessoaOptional.isPresent()){
-            throw new PessoaNaoEncontradaException("cadastroPessoa.M1");
+            throw new PessoaValidacaoException("cadastroPessoa.M1");
         }
 
         return pessoaOptional.get();
@@ -81,7 +80,7 @@ public class PessoaService {
 
             pessoaRepository.save(pessoa);
         }else{
-            throw new PessoaNaoEncontradaException("cadastroPessoa.M1");
+            throw new PessoaValidacaoException("cadastroPessoa.M1");
         }
     }
 
@@ -122,7 +121,7 @@ public class PessoaService {
 
             pessoaRepository.save(pessoa);
         }else{
-            throw new PessoaNaoEncontradaException("cadastroPessoa.M1");
+            throw new PessoaValidacaoException("cadastroPessoa.M1");
         }
     }
 

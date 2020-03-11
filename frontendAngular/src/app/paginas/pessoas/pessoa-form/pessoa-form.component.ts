@@ -2,6 +2,7 @@ import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
 import { switchMap } from 'rxjs/operators';
 
 import { PessoaService } from '../compartilhado/pessoa.service';
@@ -26,11 +27,18 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
   file: File;
 
  constructor(
+    public translate: TranslateService,
     private toastr: ToastrService,
     private pessoaService: PessoaService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder) {
+
+    translate.addLangs(['en', 'br']);
+    translate.setDefaultLang('br');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|br/) ?  browserLang : 'br');
+    this.translate = translate;
   }
 
   ngOnInit(): void {
@@ -75,7 +83,7 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
         }
 
       },
-        (error) => alert('Ocorreu um erro no servidor, tente mais tarde.')
+        (error)  => this.actionsForError(error)
       );
     }
   }
@@ -94,9 +102,9 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
   ngAfterContentChecked(): void {
     if(this.edicao){
       const pessoaNome = this.pessoa.nome + '(' + this.pessoa.id + ')' || "";
-      this.pageTitle = 'Editando Pessoa: ' + pessoaNome;
+      this.pageTitle = this.translate.instant('EDIT_PERSON.TITLE1') + pessoaNome;
     }else{
-      this.pageTitle = 'Cadastro de Nova Pessoa';
+      this.pageTitle = this.translate.instant('EDIT_PERSON.TITLE2') + '';
     }
   }
 
@@ -139,7 +147,7 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
     if(arquivo && arquivo.has('file') && pessoa.id != null){
       this.pessoaService.updateArquivo(arquivo, pessoa.id)    .subscribe(
         (response) => {
-          this.toastr.success("Solicitação processada com sucesso!");
+          this.toastr.success(this.translate.instant('MSG.SUCCESS'));
           this.router.navigateByUrl('pessoas', {skipLocationChange: true}).then(
             () => this.router.navigate(['pessoas', pessoa.id, "edit"])
           )
@@ -147,7 +155,7 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
         error => this.actionsForError(error)
       );
     }else{
-      this.toastr.success("Solicitação processada com sucesso!");
+      this.toastr.success(this.translate.instant('MSG.SUCCESS'));
       this.router.navigateByUrl('pessoas', {skipLocationChange: true}).then(
         () => this.router.navigate(['pessoas', pessoa.id, "edit"])
       )
@@ -156,14 +164,14 @@ export class PessoaFormComponent implements OnInit, AfterContentChecked {
   }
 
   protected actionsForError(error){
-    this.toastr.error("Ocorreu um erro ao processar a sua solicitação!");
+    this.toastr.error(this.translate.instant('MSG.ERROR'));
 
     this.submittingForm = false;
 
     if(error.error && error.error.titulos)
       this.serverErrorMessages = error.error.titulos;
     else
-      this.serverErrorMessages = ["Falha na comunicação com o servidor. Por favor, tente mais tarde."]
+      this.serverErrorMessages = [this.translate.instant('MSG.ERROR_SERVER')];
   }
 
   protected preview() {
