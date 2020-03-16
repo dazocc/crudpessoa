@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tb_pessoa", uniqueConstraints = @UniqueConstraint(columnNames = "cpf", name = "pesssoa_cnpj_uk") )
+@Table(name = "tb_pessoa"/*, uniqueConstraints = @UniqueConstraint(columnNames = "cpf", name = "pesssoa_cnpj_uk") */)
 @Where(clause = "ativo = true")
 public class PessoaEntity {
 
@@ -45,6 +45,15 @@ public class PessoaEntity {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_avatar")
     private ArquivoEntity avatar;
+
+    public PessoaEntity(){}
+
+    public PessoaEntity(String nome, String cpf, String email,  LocalDate dataNascimento) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;

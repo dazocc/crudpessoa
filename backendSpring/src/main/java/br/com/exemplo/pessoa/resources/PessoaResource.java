@@ -43,7 +43,7 @@ public class PessoaResource {
 
         pessoa = pessoaService.salvar(pessoa);
 
-        return ResponseEntity.status(HttpStatus.OK).body(pessoa);
+        return ResponseEntity.status(HttpStatus.CREATED).body(pessoa);
     }
 
     @PutMapping(value = "/{id}")

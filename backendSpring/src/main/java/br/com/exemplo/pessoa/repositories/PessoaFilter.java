@@ -15,6 +15,9 @@ public class PessoaFilter {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
+    public PessoaFilter() {
+    }
+
     public String getNome() {
         return nome;
     }
