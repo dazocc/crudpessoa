@@ -1,4 +1,4 @@
-package br.com.exemplo.pessoa.helper;
+package br.com.exemplo.pessoa.utils;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

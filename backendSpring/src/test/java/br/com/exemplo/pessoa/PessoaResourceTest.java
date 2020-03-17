@@ -1,7 +1,7 @@
 package br.com.exemplo.pessoa;
 
 import br.com.exemplo.pessoa.handler.DetalheException;
-import br.com.exemplo.pessoa.helper.RestResponsePage;
+import br.com.exemplo.pessoa.utils.RestResponsePage;
 import br.com.exemplo.pessoa.models.PessoaEntity;
 import br.com.exemplo.pessoa.repositories.PessoaRepository;
 import org.junit.After;
