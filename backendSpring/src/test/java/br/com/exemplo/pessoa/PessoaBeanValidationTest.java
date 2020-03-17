@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @SpringBootTest
 //@DataJpaTest
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class PessoaJavaxValidationTest {
+public class PessoaBeanValidationTest {
 
     @Autowired
     private PessoaRepository pessoaRepository;

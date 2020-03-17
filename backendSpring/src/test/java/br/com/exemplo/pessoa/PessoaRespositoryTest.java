@@ -46,7 +46,7 @@ public class PessoaRespositoryTest {
     @Test
     public void existsByCpfNotExists(){
         Boolean existe = pessoaRepository.existsByCpf("58365158082");
-        Assert.assertFalse(!existe);
+        Assert.assertFalse(existe);
     }
 
     @Test
