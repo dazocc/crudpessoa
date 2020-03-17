@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +21,7 @@ import java.util.stream.Stream;
 public class PessoaService {
 
     private final String [] EXTENSOES = new String []{"jpeg", "bmp", "png"};
-    private final Integer TAMANHO_ARQUIVO = 1024*1024;
+    private final Long TAMANHO_ARQUIVO = 1024L*1024L;
 
     @Autowired
     private PessoaRepository pessoaRepository;
@@ -50,11 +51,14 @@ public class PessoaService {
         return pessoaRepository.save(pessoa);
     }
 
-    private void validaAntesSalvarAtualizar(PessoaEntity pessoa) {
+    public void validaAntesSalvarAtualizar(PessoaEntity pessoa) {
 
-        if(validaCpfDuplicado(pessoa.getId(), pessoa.getCpf())){
+        if(pessoa != null &&
+                !StringUtils.isEmpty(pessoa.getCpf()) &&
+                validaCpfDuplicado(pessoa.getId(), pessoa.getCpf())){
             throw new PessoaValidacaoException("cadastroPessoa.M2");
         }
+
     }
 
     public void deletar(Long id){
@@ -125,17 +129,24 @@ public class PessoaService {
         }
     }
 
-    private void validaAntesAtualizarArquivo(Long tamanho, String tipo) {
+    public void validaAntesAtualizarArquivo(Long tamanho, String tipo) {
 
-        if(tamanho >  TAMANHO_ARQUIVO){
+        if(tamanho != null &&
+                tamanho >  TAMANHO_ARQUIVO){
             throw new PessoaValidacaoException("cadastroPessoaArquivo.M1");
         }
 
         List<String> tipos = Stream.of(EXTENSOES).collect(Collectors.toList());
-        if(!tipos.contains(tipo.split("/")[1])){
-            throw new PessoaValidacaoException("cadastroPessoaArquivo.M2");
-        }
-    }
 
+        if (!StringUtils.isEmpty(tipo) &&
+                tipo.contains(".")) {
+            String extensaoDoArquivo = tipo.substring(tipo.lastIndexOf(46) + 1);
+
+            if(!tipos.contains(extensaoDoArquivo)){
+                throw new PessoaValidacaoException("cadastroPessoaArquivo.M2");
+            }
+        }
+
+    }
 
 }
