@@ -20,6 +20,7 @@ Este projeto utiliza as seguinte tecnologias no backend:
    - Flyway
    - Maven 3
    
+   
 Já no frontend: 
   - Angular 9
   - Bootstrap 4
@@ -79,7 +80,15 @@ Já no frontend:
   - db.migration - Arquivos com comandos SQL para aplicar no Postgres
 
   - messages.properties e messages_en_US.properties - responsáveis pelas mensagens internacionalizadas.
- 
+  
+  - PessoaBeanValidationTest - responsável pelo teste das regras de Bean Validation
+
+  - PessoaResourceTest - responsável pelo teste de integração do Resource
+  
+  - PessoaRespositoryTest - responsável pelo teste de integração do Repository
+  
+  - RestResponsePage, DateUtils - Classes utilitárias para reúso no projeto
+   
  O projeto frontend esta formatado da seguinte forma (a partir da pasta app):
  
   - pasta compartilhado - existem dois componentes que auxiliarão na exibição de erro do field(form-field-error)
