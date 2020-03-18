@@ -1,8 +1,15 @@
 package br.com.exemplo.pessoa.handler;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class DetalheException {
 
     private Integer status;
@@ -10,9 +17,6 @@ public class DetalheException {
     private Long horario;
 
     private List<String> titulos;
-
-    public DetalheException(){
-    }
 
     public DetalheException(Integer status, Long horario, String titulo) {
         this.status = status;
@@ -28,27 +32,4 @@ public class DetalheException {
         this.titulos = titulos;
     }
 
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Long getHorario() {
-        return horario;
-    }
-
-    public void setHorario(Long horario) {
-        this.horario = horario;
-    }
-
-    public List<String> getTitulos() {
-        return titulos;
-    }
-
-    public void setTitulos(List<String> titulos) {
-        this.titulos = titulos;
-    }
 }
