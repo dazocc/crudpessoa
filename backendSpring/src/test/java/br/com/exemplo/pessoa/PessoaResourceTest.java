@@ -1,9 +1,10 @@
 package br.com.exemplo.pessoa;
 
 import br.com.exemplo.pessoa.handler.DetalheException;
-import br.com.exemplo.pessoa.utils.RestResponsePage;
 import br.com.exemplo.pessoa.models.PessoaEntity;
 import br.com.exemplo.pessoa.repositories.PessoaRepository;
+import br.com.exemplo.pessoa.utils.DateUtils;
+import br.com.exemplo.pessoa.utils.RestResponsePage;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,7 +17,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.util.UriComponentsBuilder;
-import br.com.exemplo.pessoa.utils.DateUtils;
 
 import java.time.LocalDate;
 
