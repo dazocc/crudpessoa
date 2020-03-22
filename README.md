@@ -87,6 +87,8 @@ Já no frontend:
   
   - PessoaRespositoryTest - responsável pelo teste de integração do Repository
   
+  - PessoaService - responsável pelo teste unitário da regra de negócio
+  
   - RestResponsePage, DateUtils - Classes utilitárias para reúso no projeto
    
  O projeto frontend esta formatado da seguinte forma (a partir da pasta app):

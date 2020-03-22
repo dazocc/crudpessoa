@@ -2,6 +2,9 @@ package br.com.exemplo.pessoa.models;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Where;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -14,6 +17,9 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "tb_pessoa"/*, uniqueConstraints = @UniqueConstraint(columnNames = "cpf", name = "pesssoa_cnpj_uk") */)
 @Where(clause = "ativo = true")
+@Getter
+@Setter
+@NoArgsConstructor
 public class PessoaEntity {
 
     @Id
@@ -46,8 +52,6 @@ public class PessoaEntity {
     @JoinColumn(name = "id_avatar")
     private ArquivoEntity avatar;
 
-    public PessoaEntity(){}
-
     public PessoaEntity(String nome, String cpf, String email,  LocalDate dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;
@@ -55,59 +59,4 @@ public class PessoaEntity {
         this.email = email;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public ArquivoEntity getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(ArquivoEntity avatar) {
-        this.avatar = avatar;
-    }
-
-    public Boolean getAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(Boolean ativo) {
-        this.ativo = ativo;
-    }
 }
