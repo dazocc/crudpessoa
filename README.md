@@ -1,6 +1,6 @@
 # Crud Pessoa
 
- A idéia do projeto é um crud de Pessoa internacionalizado, ou seja, é possível listar, cadastrar, editar e excluir(logicamente) utilizando inglês e português.
+ A idéia do projeto é um crud de Pessoa(Postgres) e Livros(MongoDB) internacionalizado, ou seja, é possível listar, cadastrar, editar e excluir utilizando inglês e português.
  
  Segue imagens de como ficou:
  
@@ -11,6 +11,12 @@
 <h1 align="center">
     <img alt="Edit" title="#dale" src="images/edit.png" width="900px" />
 </h1>
+
+Além disso foi criado uma documentação dos serviços disponíveis utilizando Swagger conforme imagem
+(para acessar basta digitar na url o caminho /swagger-ui/index.html):
+ <h1 align="center">
+    <img alt="List" title="#dale" src="images/Documentacao.png" width="900px" />
+</h1>
  
 # Tecnologias:
 
@@ -19,6 +25,8 @@ Este projeto utiliza as seguinte tecnologias no backend:
    - Postgres
    - Flyway
    - Maven 3
+   - MongoDB
+   - Springdoc-Openapi(Swagger)
    
    
 Já no frontend: 
@@ -36,14 +44,17 @@ Já no frontend:
     1 - Instalar o Postgres e ajustar o arquivo application.properties, onde deve ser configurada a 
     string de conexão para o banco no parametro spring.datasource.url.
     
-    2 - Instalar o Java 11.
+    2 - Instalar o MongoDB e ajustar o arquivo application.properties, onde deve ser configurada a 
+    string de conexão para o banco no parametro spring.data.mongodb.uri.
     
-    3 - Instalar o Maven 3.
+    3 - Instalar o Java 11.
+   
+    4 - Instalar o Maven 3.
     
-    4 - Executar o comando clean instal no projeto, que gerará o arquivo "pessoa-1.0.0-SNAPSHOT.jar" 
+    5 - Executar o comando clean instal no projeto, que gerará o arquivo "pessoa-1.0.0-SNAPSHOT.jar" 
         do projeto na pasta target.
         
-    5 - Por fim executar o comando java -jar no arquivo "pessoa-1.0.0-SNAPSHOT.jar".
+    6 - Por fim executar o comando java -jar no arquivo "pessoa-1.0.0-SNAPSHOT.jar".
   
   - Para o front end:
   
