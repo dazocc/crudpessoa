@@ -1,6 +1,6 @@
 # Crud Pessoa
 
- A idéia do projeto é um crud de Pessoa e Livros internacionalizado, ou seja, é possível listar, cadastrar, editar e excluir utilizando inglês e português.
+ A idéia do projeto é um crud de Pessoa(Postgres) e Livros(MongoDB) internacionalizado, ou seja, é possível listar, cadastrar, editar e excluir utilizando inglês e português.
  
  Segue imagens de como ficou:
  
@@ -26,7 +26,7 @@ Este projeto utiliza as seguinte tecnologias no backend:
    - Flyway
    - Maven 3
    - MongoDB
-   - Springdoc-Openapi
+   - Springdoc-Openapi(Swagger)
    
    
 Já no frontend: 
