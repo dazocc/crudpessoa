@@ -1,8 +1,8 @@
 package br.com.exemplo.pessoa;
 
 import br.com.exemplo.pessoa.handler.DetalheException;
-import br.com.exemplo.pessoa.models.PessoaEntity;
-import br.com.exemplo.pessoa.repositories.PessoaRepository;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaRepository;
 import br.com.exemplo.pessoa.utils.DateUtils;
 import br.com.exemplo.pessoa.utils.RestResponsePage;
 import org.junit.After;

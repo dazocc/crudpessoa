@@ -1,6 +1,6 @@
-package br.com.exemplo.pessoa.repositories;
+package br.com.exemplo.pessoa.jpa.repositories;
 
-import br.com.exemplo.pessoa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 

@@ -1,7 +1,7 @@
 package br.com.exemplo.pessoa;
 
 import br.com.exemplo.pessoa.exceptions.PessoaValidacaoException;
-import br.com.exemplo.pessoa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
 import br.com.exemplo.pessoa.services.PessoaService;
 import org.junit.Rule;
 import org.junit.Test;

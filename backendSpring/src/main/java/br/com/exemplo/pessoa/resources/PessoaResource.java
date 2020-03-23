@@ -1,7 +1,7 @@
 package br.com.exemplo.pessoa.resources;
 
-import br.com.exemplo.pessoa.models.PessoaEntity;
-import br.com.exemplo.pessoa.repositories.PessoaFilter;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaFilter;
 import br.com.exemplo.pessoa.services.PessoaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

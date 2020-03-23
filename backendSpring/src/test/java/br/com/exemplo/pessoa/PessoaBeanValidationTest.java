@@ -1,7 +1,7 @@
 package br.com.exemplo.pessoa;
 
-import br.com.exemplo.pessoa.models.PessoaEntity;
-import br.com.exemplo.pessoa.repositories.PessoaRepository;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaRepository;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;

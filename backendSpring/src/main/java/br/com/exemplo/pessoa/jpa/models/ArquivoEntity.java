@@ -1,4 +1,4 @@
-package br.com.exemplo.pessoa.models;
+package br.com.exemplo.pessoa.jpa.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

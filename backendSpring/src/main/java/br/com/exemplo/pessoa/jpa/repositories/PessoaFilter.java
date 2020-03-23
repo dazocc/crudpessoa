@@ -1,4 +1,4 @@
-package br.com.exemplo.pessoa.repositories;
+package br.com.exemplo.pessoa.jpa.repositories;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

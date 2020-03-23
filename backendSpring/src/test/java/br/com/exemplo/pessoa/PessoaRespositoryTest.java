@@ -1,7 +1,7 @@
 package br.com.exemplo.pessoa;
 
-import br.com.exemplo.pessoa.models.PessoaEntity;
-import br.com.exemplo.pessoa.repositories.PessoaRepository;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaRepository;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.validation.ConstraintViolationException;
 import java.time.LocalDate;
 
 @RunWith(SpringRunner.class)

@@ -1,11 +1,11 @@
 package br.com.exemplo.pessoa.services;
 
 import br.com.exemplo.pessoa.exceptions.PessoaValidacaoException;
-import br.com.exemplo.pessoa.models.ArquivoEntity;
-import br.com.exemplo.pessoa.models.PessoaEntity;
-import br.com.exemplo.pessoa.repositories.PessoaFilter;
-import br.com.exemplo.pessoa.repositories.PessoaRepository;
-import br.com.exemplo.pessoa.repositories.PessoaSpecification;
+import br.com.exemplo.pessoa.jpa.models.ArquivoEntity;
+import br.com.exemplo.pessoa.jpa.models.PessoaEntity;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaFilter;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaRepository;
+import br.com.exemplo.pessoa.jpa.repositories.PessoaSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
