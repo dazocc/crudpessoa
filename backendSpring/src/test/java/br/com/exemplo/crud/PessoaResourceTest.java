@@ -26,7 +26,7 @@ public class PessoaResourceTest {
 
     private final String URL = "/pessoas";
     private final String PARAMETER_ID = "/{id}";
-    private final String NAO_ENCONTROU_PESSOA = "Não encontrou a crud";
+    private final String NAO_ENCONTROU_PESSOA = "Não encontrou a pessoa";
     private final String EMAIL_EH_OBRIGATORIO = "Email é obrigatório";
     private final String CPF_EH_OBRIGATORIO = "CPF é obrigatório";
     private final String NOME_EH_OBRIGATORIO = "Nome é obrigatório";
