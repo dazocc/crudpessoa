@@ -1,6 +1,7 @@
 package br.com.exemplo.crud.resources;
 
 import br.com.exemplo.crud.mongo.models.LivroEntity;
+import br.com.exemplo.crud.mongo.repositories.LivroFilter;
 import br.com.exemplo.crud.services.LivroService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -38,8 +39,8 @@ public class LivroResource {
             @ApiResponse(responseCode = STATUS_CONFLIT, description = STATUS_CONFLIT_DESCRIPTION, content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE))
     })
     @GetMapping
-    public ResponseEntity<Page<LivroEntity>> listar(/*LivroFilter livroFilter,*/ @PageableDefault(value = Integer.MAX_VALUE) Pageable pageable) {
-        Page<LivroEntity> pageLivro = livroService.listar(/*livroFilter ,*/ pageable);
+    public ResponseEntity<Page<LivroEntity>> listar(@PageableDefault(value = Integer.MAX_VALUE) Pageable pageable) {
+        Page<LivroEntity> pageLivro = livroService.listar(pageable);
 
         return ResponseEntity.status(HttpStatus.OK).body(pageLivro);
     }

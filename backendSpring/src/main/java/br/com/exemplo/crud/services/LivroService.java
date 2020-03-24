@@ -16,11 +16,9 @@ public class LivroService {
     @Autowired
     private LivroRepository livroRepository;
 
-    public Page<LivroEntity> listar(/*PessoaFilter pessoaFilter, */Pageable pageable) {
+    public Page<LivroEntity> listar(Pageable pageable) {
 
-//        PessoaSpecification ps = new PessoaSpecification(pessoaFilter);
-
-        return livroRepository.findAll(/*ps, */pageable);
+        return livroRepository.findAll(pageable);
     }
 
     public LivroEntity buscarPorId(String id) {

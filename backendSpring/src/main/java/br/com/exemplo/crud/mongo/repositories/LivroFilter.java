@@ -1,4 +1,4 @@
-package br.com.exemplo.crud.jpa.repositories;
+package br.com.exemplo.crud.mongo.repositories;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
@@ -10,15 +10,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-public class PessoaFilter {
+public class LivroFilter {
 
     private String nome;
-
-    private String email;
-
-    private String cpf;
-
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate dataNascimento;
 
 }
