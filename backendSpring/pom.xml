@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>br.com.exemplo.</groupId>
-    <artifactId>pessoa</artifactId>
+    <artifactId>crud</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>pessoa</name>
-    <description>Cadastro Pessoa</description>
+    <name>crud</name>
+    <description>CRUD</description>
 
     <properties>
         <java.version>11</java.version>
