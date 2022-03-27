@@ -1,0 +1,8 @@
+### kubectl apply commands in order
+
+kubectl apply -f postgresdb-secret.yaml
+kubectl apply -f postgresdb.yaml
+kubectl apply -f pgadmin.yaml
+
+###for minikube give a url to service you must execute 
+minikube service --url mongo-express-service
